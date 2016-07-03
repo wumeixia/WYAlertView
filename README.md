@@ -24,4 +24,4 @@ Customized alertView / loadingView for replacing UIAlertView. Support display qu
     [alert show];
 #Contact me
 
-    .email: 1354201519@qq.com
+    email: 1354201519@qq.com
