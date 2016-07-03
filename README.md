@@ -9,7 +9,7 @@ Customized alertView / loadingView for replacing UIAlertView. Support display qu
 
 #Cases
 
-  WYAlertView * alert = [[WYAlertView alloc] initHeaderImageAlertWithTitle:@"提示" message:@"提醒样式"               cancelButtonTitle:@"取消" rightButtonTitle:@"确认" imageName:nil];
+    WYAlertView * alert = [[WYAlertView alloc] initHeaderImageAlertWithTitle:@"提示" message:@"提醒样式"               cancelButtonTitle:@"取消" rightButtonTitle:@"确认" imageName:nil];
     alert.isRightExist = [updateDic[@"updateForce"] boolValue];
     alert.leftColor = [UIColor getColor:@"8e8e8e"];
     alert.rightColor = [UIColor getColor:@"dcb000"];
@@ -17,12 +17,10 @@ Customized alertView / loadingView for replacing UIAlertView. Support display qu
     {
         nslog(@"确认按钮");
     };
-    
     alert.leftBlock=^()
     {
         nslog(@"取消按钮");
     };
-    
     [alert show];
     
 #Contact me
