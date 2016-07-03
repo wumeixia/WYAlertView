@@ -6,7 +6,6 @@
 //  Copyright © 2016年 wy. All rights reserved.
 //
 #import "WYAlertView.h"
-
 #import "UIColor+extend.h"
 
 // 设置警告框的长和宽
@@ -119,12 +118,12 @@
         _whiteView.layer.masksToBounds = YES;
         [self addSubview:_whiteView];
         self.backgroundColor = [UIColor getColor:@"000000" alpha:0.6];
-
+        
         UIImageView * headImage = [[UIImageView alloc] init];
         if (headImgString!=nil) {
             CGFloat headImgH = 0;
             if ([[headImgString lowercaseString] hasPrefix:@"http"]) {
-                //[headImage sd_setImageWithURL:[NSURL URLWithString:headImgString] placeholderImage:[UIImage imageNamed:@"imageDefault"]];
+//                [headImage sd_setImageWithURL:[NSURL URLWithString:headImgString] placeholderImage:[UIImage imageNamed:@"imageDefault"]];
                 //headImgH = headImg.size.height*Alertwidth/headImg.size.width;
                 headImgH = 60;
             }else{
@@ -171,7 +170,7 @@
             self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(WYGapX, Y, imageWidth, imageWidth)];
             [self.iconImageView setBackgroundColor:[UIColor clearColor]];
             if ([[iconString lowercaseString] hasPrefix:@"http"]) {
-                //[self.iconImageView sd_setImageWithURL:[NSURL URLWithString:iconString] placeholderImage:[UIImage imageNamed:@"imageDefault"]];
+//                [self.iconImageView sd_setImageWithURL:[NSURL URLWithString:iconString] placeholderImage:[UIImage imageNamed:@"imageDefault"]];
             }
             else
             {
@@ -188,10 +187,10 @@
         CGSize size = [self sizeWithText:content font:[UIFont systemFontOfSize:15.0f] maxW:contentLabelW];
         
         CGFloat contentLabelH = (iconString!=nil)?
-                                (size.height>imageWidth?
-                                 imageWidth:size.height):
-                                (size.height>(SCREENSIZE.height/4))?
-                                SCREENSIZE.height/4:size.height;
+        (size.height>imageWidth?
+         imageWidth:size.height):
+        (size.height>(SCREENSIZE.height/4))?
+        SCREENSIZE.height/4:size.height;
         
         self.alertContentLabel = [[UILabel alloc] init];
         self.alertContentLabel.numberOfLines = 0;
@@ -222,10 +221,10 @@
             CGFloat FieldX = WYGapX;
             //CGFloat FieldY = (iconString!=nil)?CGRectGetMaxY(self.iconImageView.frame)+10:CGRectGetMaxY(self.alertContentLabel.frame)+10;
             CGFloat FieldY = (iconString!=nil)?
-                            CGRectGetMaxY(self.iconImageView.frame)+WYHeigthGap:
-                            ((contentLabelH==(SCREENSIZE.height/4)?
-                            CGRectGetMaxY(scrollView.frame)+WYHeigthGap:
-                              CGRectGetMaxY(self.alertContentLabel.frame)+WYHeigthGap));
+            CGRectGetMaxY(self.iconImageView.frame)+WYHeigthGap:
+            ((contentLabelH==(SCREENSIZE.height/4)?
+              CGRectGetMaxY(scrollView.frame)+WYHeigthGap:
+              CGRectGetMaxY(self.alertContentLabel.frame)+WYHeigthGap));
             CGFloat FieldW = Alertwidth-25;
             CGFloat FieldH = hasText?36:0;
             
@@ -250,9 +249,9 @@
         CGRect rightbtnFrame;
         //CGFloat btnY = hasText?CGRectGetMaxY(self.text.frame)+10:CGRectGetMaxY(self.alertContentLabel.frame)+20;
         CGFloat btnY = hasText?CGRectGetMaxY(self.text.frame)+WYHeigthGap:
-                    (((contentLabelH==(SCREENSIZE.height/4))?
-                        CGRectGetMaxY(scrollView.frame)+WYHeigthGap:
-                        CGRectGetMaxY(self.alertContentLabel.frame)+WYHeigthGap));
+        (((contentLabelH==(SCREENSIZE.height/4))?
+          CGRectGetMaxY(scrollView.frame)+WYHeigthGap:
+          CGRectGetMaxY(self.alertContentLabel.frame)+WYHeigthGap));
         if (leftTitle !=nil && rigthTitle==nil) {
             //只有左边按钮
             leftbtnFrame = CGRectMake(0, btnY, Alertwidth, WYButtonHeigth);
@@ -332,7 +331,7 @@
         return;
     }
     UIWindow* tempWindow = [UIApplication sharedApplication].keyWindow;//[[[UIApplication sharedApplication] windows] lastObject];
-//    self.frame = CGRectMake((CGRectGetWidth(topVC.view.bounds) - Alertwidth) * 0.5-30, (CGRectGetHeight(topVC.view.bounds) - _height) * 0.5-20, Alertwidth, _height);
+    //    self.frame = CGRectMake((CGRectGetWidth(topVC.view.bounds) - Alertwidth) * 0.5-30, (CGRectGetHeight(topVC.view.bounds) - _height) * 0.5-20, Alertwidth, _height);
     [tempWindow addSubview:self];
     self.alpha=0;
     isShow = YES;
