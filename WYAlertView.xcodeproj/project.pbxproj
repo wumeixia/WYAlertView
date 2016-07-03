@@ -15,6 +15,8 @@
 		88C9E3101CE2D85D00609D2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C9E30E1CE2D85D00609D2D /* LaunchScreen.storyboard */; };
 		88C9E31B1CE2D85D00609D2D /* WYAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C9E31A1CE2D85D00609D2D /* WYAlertViewTests.m */; };
 		88C9E3261CE2D85D00609D2D /* WYAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C9E3251CE2D85D00609D2D /* WYAlertViewUITests.m */; };
+		88C9E3391CE3331D00609D2D /* WYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C9E3381CE3331D00609D2D /* WYAlertView.m */; };
+		88F3CDEA1D20225D00738D76 /* UIColor+extend.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F3CDE91D20225D00738D76 /* UIColor+extend.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		88C9E3211CE2D85D00609D2D /* WYAlertViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYAlertViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C9E3251CE2D85D00609D2D /* WYAlertViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYAlertViewUITests.m; sourceTree = "<group>"; };
 		88C9E3271CE2D85D00609D2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88C9E3371CE3331D00609D2D /* WYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYAlertView.h; sourceTree = "<group>"; };
+		88C9E3381CE3331D00609D2D /* WYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYAlertView.m; sourceTree = "<group>"; };
+		88F3CDE81D20225D00738D76 /* UIColor+extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extend.h"; sourceTree = "<group>"; };
+		88F3CDE91D20225D00738D76 /* UIColor+extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extend.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		88C9E2FF1CE2D85D00609D2D /* WYAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				88C9E3331CE2D8E500609D2D /* XMAlertView */,
 				88C9E3031CE2D85D00609D2D /* AppDelegate.h */,
 				88C9E3041CE2D85D00609D2D /* AppDelegate.m */,
 				88C9E3061CE2D85D00609D2D /* ViewController.h */,
@@ -138,6 +145,17 @@
 				88C9E3271CE2D85D00609D2D /* Info.plist */,
 			);
 			path = WYAlertViewUITests;
+			sourceTree = "<group>";
+		};
+		88C9E3331CE2D8E500609D2D /* XMAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				88F3CDE81D20225D00738D76 /* UIColor+extend.h */,
+				88F3CDE91D20225D00738D76 /* UIColor+extend.m */,
+				88C9E3371CE3331D00609D2D /* WYAlertView.h */,
+				88C9E3381CE3331D00609D2D /* WYAlertView.m */,
+			);
+			path = XMAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				88C9E3081CE2D85D00609D2D /* ViewController.m in Sources */,
+				88C9E3391CE3331D00609D2D /* WYAlertView.m in Sources */,
 				88C9E3051CE2D85D00609D2D /* AppDelegate.m in Sources */,
 				88C9E3021CE2D85D00609D2D /* main.m in Sources */,
+				88F3CDEA1D20225D00738D76 /* UIColor+extend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WYAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Suning.WYAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WYAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Suning.WYAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +520,7 @@
 				88C9E32C1CE2D85D00609D2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88C9E32D1CE2D85D00609D2D /* Build configuration list for PBXNativeTarget "WYAlertViewTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +529,7 @@
 				88C9E32F1CE2D85D00609D2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88C9E3301CE2D85D00609D2D /* Build configuration list for PBXNativeTarget "WYAlertViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +538,7 @@
 				88C9E3321CE2D85D00609D2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
