@@ -22,6 +22,6 @@ Customized alertView / loadingView for replacing UIAlertView. Support display qu
         nslog(@"取消按钮");
     };
     [alert show];
-    
 #Contact me
+
     email: 1354201519@qq.com
