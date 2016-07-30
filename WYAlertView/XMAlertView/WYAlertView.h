@@ -30,6 +30,8 @@
 @property (strong, nonatomic) UIColor *contentColor;//内容颜色
 @property (strong, nonatomic) UIColor *titleColor;//标题内容颜色
 @property (assign, nonatomic) BOOL isRightExist;
+@property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *message;
 - (void)show;
 
 @property (nonatomic, strong) UITextField *text;

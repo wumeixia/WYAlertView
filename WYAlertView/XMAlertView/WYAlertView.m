@@ -348,6 +348,12 @@
 -(void)setTitleColor:(UIColor *)titleColor{
     self.alertTitleLabel.textColor=titleColor;
 }
+-(void)setTitle:(NSString *)title{
+    self.alertTitleLabel.text=title;
+}
+-(void)setMessage:(NSString *)message{
+    self.alertContentLabel.text = message;
+}
 
 - (void)dismissAlert
 {
